@@ -5,47 +5,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Antonin Paris</title>
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/index.css" rel="stylesheet">
 </head>
 
 <body>
+  <header>
+    <a href="/"><img id="logo" src="/images/logo.svg" alt="" width="200px"></a>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Bagage</a></li>
+        <div class="nav_divider_slash">
+        </div>
+        <li><a href="/antonin">Antonin</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
-    <img src="/images/dither_it_90ACA263-C733-4FFB-A192-AA1CABA431EF_1_201_a(1).png" alt="Antonin" width="200">
-    <p>Aspirant intégrateur web.</p>
+    <article>
+      <figure>
+        <img id="me" src="/images/me.png" alt="Selfie de moi avec une casquette">
+        <figcaption>C'est moi ! It's me !</figcaption>
+      </figure>
+      <section>
+        <p>J'habite dans l'Est de la France dans une région nommée Alsace</p>
+        <p>Ceci est mon blog.</p>
+        <p>J'espère que mes écrits parlerons à des lecteurs.</p>
+      </section>
+      <section>
+        <p>Living in the east of France, Alsace.</p>
+        <p>My blog will mainly be in French as it's my strongest language, but I'll
+          hopefully also add some English posts to connect
+          with more readers.</p>
+      </section>
+      <section>
+        <p>Contact :</p>
+        <ul>
+          <li>Bluesky : <a href="https://bsky.app/profile/anpari.bsky.social">@anparis.bsky.social</a></li>
+          <li>Are.na : <a href="https://www.are.na/antonin-paris/channels">My Are.na account</a></li>
+          <li>Mail : <a href="mailto:mail&#64;antoninparis.com">mail[at]antoninparis.com</a></li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>Competences</h2>
-      <ul>
-        <li>HTML / CSS</li>
-        <li>Javascript</li>
-        <li>PHP</li>
-        <li>Figma</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Formation</h2>
-      <p>
-        <strong>Titre professionnel DWWM</strong> (développement web et web mobile)<br>
-        <time datetime="2022-09">Septembre 2022</time> &ndash; <time datetime="2023-06">Juin 2023</time>
-      </p>
-      <ul>
-        <li>Stage chez <a href="https://alxgraphiste.com/">Alx graphiste</a></li>
-        <ul>
-          <li>Maquettage Figma</li>
-          <li>Réalisation d'un site vitrine pour le photographe <a href="http://francoisnussbaumer.com/">François
-              Nussbaumer</a></li>
-          <li>Intégration HTML, SCSS et librairie SwiperJS</li>
-        </ul>
-        <li>Réalisation d'un reseau social autour de la culture</li>
-        <ul>
-          <li>Stack : Symfony 7, MySQL, Javascript</li>
-          <li>Redaction d'un cahier des charges</li>
-          <li>Maquettage Figma</li>
-        </ul>
-      </ul>
-    </section>
+    </article>
   </main>
+  <footer>
+    antonin
+  </footer>
+
 </body>
 
 </html>
