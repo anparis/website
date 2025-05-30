@@ -1,6 +1,66 @@
 body {
+  background-color: #FFFBF3;
   font-family: var(--font-system);
   font-optical-sizing: auto;
-  font-size: var(--font-system-code-size);
+  /*font-size: var(--font-system-code-size);*/
+  font-weight: 300;
+  line-height: 1.7;
 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 9ch 1fr auto 0.5fr;
+  gap: 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "titre  "
+    "auteur "
+    "billets"
+    "footer ";
+}
+
+body .site,
+main {
+  margin: 1rem;
+}
+
+.titre {
+  text-align: center;
+
+  h1 {
+    color: #FFF;
+    -webkit-text-stroke-color: #FF3939;
+    -webkit-text-stroke-width: 1px;
+    font-size: 4em;
+    font-family: monospace;
+    filter: drop-shadow(0px 4px 4px #F89017);
+
+    a {
+      color: #C9CDF1;
+
+      &:hover {
+        color: pink;
+      }
+    }
+
+
+  }
+}
+
+
+ul#posts-list {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: none;
+  padding: 0 1rem;
+
+  li {
+    display: grid;
+    grid-template-columns: 10ch 0fr 3fr;
+    grid-template-rows: auto;
+    row-gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "billet-date colon billet-titre";
+    grid-area: billets;
+  }
 }
