@@ -1,49 +1,79 @@
 body {
-  background-color: #FFFBF3;
+  /*background-color: #FFFBF3;*/
   font-family: var(--font-system);
   font-optical-sizing: auto;
   /*font-size: var(--font-system-code-size);*/
   font-weight: 300;
   line-height: 1.7;
+}
 
+body#home {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 10em 1fr 17fr 0.5fr;
+  grid-template-rows: 5em auto 1fr 17fr 0.5fr;
   gap: 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "titre  "
-    "auteur "
-    "billets"
-    "footer ";
+    "titre        "
+    "logo         "
+    "introduction "
+    "billets      "
+    "footer       ";
 }
 
-body .site,
+.site,
 main {
   margin: 1rem;
 }
 
 .titre {
   text-align: center;
+  grid-area: "titre";
+  position: sticky;
+  top: 0;
 
   h1 {
-    letter-spacing: 0.2em;
-    /*color: #FFF;*/
-    /*-webkit-text-stroke-color: #FF3939;*/
-    /*-webkit-text-stroke-width: 1px;*/
-    font-size: 2em;
-    /*font-family: monospace;*/
-    /*filter: drop-shadow(0px 4px 4px #F89017);*/
+    font-family: "Faculty Glyphic", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.1em;
+    /*font-size: 2em;*/
+    /*filter: drop-shadow(0px 4px 4px #B0EF9B);*/
 
     a {
-      color: #C9CDF1;
+      color: #852323;
 
       &:hover {
         color: pink;
       }
     }
+  }
+}
 
+section.logo {
+  grid-area: "logo";
+  text-align: center;
 
+  img {
+    width: 120px;
+  }
+}
+
+section.introduction {
+  grid-area: "introduction";
+
+  p {
+    margin: 1rem;
+  }
+
+  .ascii-star {
+    font-family: var(--font-system-code);
+    white-space: pre;
+    word-wrap: normal;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 0;
+    color: var(--nav-separator-color);
   }
 }
 
@@ -53,16 +83,24 @@ ul#posts-list {
   list-style-position: inside;
   margin: none;
   padding: 0 1rem;
+  grid-area: "billets";
 
   li {
     display: grid;
-    grid-template-columns: 10ch 0fr 3fr;
+    grid-template-columns: 1fr 0fr 3fr;
     grid-template-rows: auto;
     row-gap: 10px;
-    grid-auto-flow: row;
+    grid-auto-flow: column;
     grid-template-areas:
       "billet-date colon billet-titre";
     grid-area: billets;
+    align-items: center;
+    border-bottom: 1px dotted var(--nav-separator-color);
+
+    a {
+      justify-self: end;
+      padding: 1ch;
+    }
   }
 }
 
@@ -71,4 +109,5 @@ footer {
   position: sticky;
   bottom: 0;
   background-color: lightgrey;
+  grid-area: "footer";
 }
