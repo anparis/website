@@ -9,8 +9,9 @@ body {
 
 body#home {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 5em auto 1fr 17fr 0.5fr;
+  grid-template-rows: auto auto auto 1fr auto;
+  min-height: 100vh;  
+  /* grid-template-rows: 5em auto 1fr 17fr 0.5fr; */
   gap: 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -29,8 +30,6 @@ main {
 .titre {
   text-align: center;
   grid-area: "titre";
-  position: sticky;
-  top: 0;
 
   h1 {
     font-family: "Faculty Glyphic", sans-serif;
@@ -53,30 +52,10 @@ main {
 section.logo {
   grid-area: "logo";
   text-align: center;
-
   img {
     width: 120px;
   }
 }
-
-section.introduction {
-  grid-area: "introduction";
-
-  p {
-    margin: 1rem;
-  }
-
-  .ascii-star {
-    font-family: var(--font-system-code);
-    white-space: pre;
-    word-wrap: normal;
-    font-size: 1rem;
-    line-height: 1;
-    margin: 0;
-    color: var(--nav-separator-color);
-  }
-}
-
 
 ul#posts-list {
   list-style-type: none;
@@ -104,10 +83,10 @@ ul#posts-list {
   }
 }
 
-footer {
-  display: flex;
-  position: sticky;
-  bottom: 0;
-  background-color: lightgrey;
-  grid-area: "footer";
-}
+/* footer { */
+/*   display: flex; */
+/*   position: sticky; */
+/*   bottom: 0; */
+/*   background-color: lightgrey; */
+/*   grid-area: "footer"; */
+/* } */
